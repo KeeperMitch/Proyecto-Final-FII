@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Final - Física II</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 <aside class="sidebar">
         <div class="project-header">
             <div class="logo">Proyecto Final</div>
@@ -10,30 +19,30 @@
                 </ul>
             </div>
         </div>
-
+ 
         <button class="nav-btn active" onclick="showSection('gauss', this)">
             1. Ley de Gauss
         </button>
-
+ 
         <button class="nav-btn" onclick="showSection('corriente', this)">
             2. Corriente Eléctrica
         </button>
-
+ 
         <button class="nav-btn" onclick="showSection('campo-mag', this)">
             3. Campo Magnético
         </button>
-
+ 
         <button class="nav-btn" onclick="showSection('induccion', this)">
             4. Inducción EM
         </button>
-
+ 
         <button class="nav-btn" onclick="showSection('ondas', this)">
             5. Ondas EM
         </button>
     </aside>
-
+ 
     <main class="main-content">
-
+ 
         <section id="gauss" class="section active">
             <div class="card">
                 <h1>Ley de Gauss para una esfera aislante</h1>
@@ -44,7 +53,7 @@
                         <div class="mode-btn active" data-mode="cross">Sección transversal</div>
                         <div class="mode-btn" data-mode="graph">Campo eléctrico E vs r</div>
                     </div>
-
+ 
                     <div class="controls-grid">
                         <div class="ctrl-card">
                             <p class="ctrl-label">Radio de la esfera R</p>
@@ -61,18 +70,18 @@
                             </div>
                         </div>
                     </div>
-
+ 
                     <div class="canvas-wrap">
                         <canvas id="cvGauss" height="360"></canvas>
                     </div>
-
+ 
                     <div class="legend">
                         <div class="legend-item"><div class="legend-dot" style="background:#378ADD"></div>Esfera aislante</div>
                         <div class="legend-item"><div class="legend-dot" style="background:#D85A30"></div>Superficie gaussiana</div>
                         <div class="legend-item"><div class="legend-dot" style="background:#1D9E75"></div>Vectores de campo E</div>
                         <div class="legend-item"><div class="legend-dot" style="background:#BA7517"></div>Punto de medición (arrastra)</div>
                     </div>
-
+ 
                     <div class="metrics-row">
                         <div class="metric">
                             <p class="metric-label">Radio gaussiano r</p>
@@ -87,12 +96,12 @@
                             <p class="metric-value"><span id="metGaussE">—</span> <span class="metric-unit">N/C</span></p>
                         </div>
                     </div>
-
+ 
                     <div class="eq-box" id="eqGaussBox"></div>
                 </div>
             </div>
         </section>
-
+ 
         <section id="corriente" class="section">
             <div class="card">
                 <h1>Corriente eléctrica</h1>
@@ -114,7 +123,7 @@
                             <span class="mat-rho">ρ = 1.10×10⁻⁶ Ω·m</span>
                         </div>
                     </div>
-
+ 
                     <div class="controls-grid">
                         <div class="ctrl-card">
                             <p class="ctrl-label">Voltaje V</p>
@@ -138,18 +147,18 @@
                             </div>
                         </div>
                     </div>
-
+ 
                     <div class="canvas-wrap">
                         <canvas id="cvCorriente" height="260"></canvas>
                     </div>
-
+ 
                     <div class="legend">
                         <div class="legend-item"><div class="legend-dot" style="background:#b0713a"></div>Conductor</div>
                         <div class="legend-item"><div class="legend-dot" style="background:#00f0ff"></div>Electrones libres (e⁻)</div>
                         <div class="legend-item"><div class="legend-dot" style="background:#ff6b6b"></div>Terminal + (ánodo)</div>
                         <div class="legend-item"><div class="legend-dot" style="background:#4a9eff"></div>Terminal − (cátodo)</div>
                     </div>
-
+ 
                     <div class="metrics-row">
                         <div class="metric">
                             <p class="metric-label">Resistencia R</p>
@@ -168,19 +177,19 @@
                             <p class="metric-value"><span id="metVd">—</span> <span class="metric-unit" id="metVdu">μm/s</span></p>
                         </div>
                     </div>
-
+ 
                     <div class="eq-box" id="eqBox"></div>
                 </div>
             </div>
         </section>
-
+ 
        <section id="campo-mag" class="section">
     <div class="card">
         <h1>Campo magnético</h1>
         <p>El paso de una corriente eléctrica genera de forma inevitable una alteración en el espacio circundante: un campo magnético <span class="var">B</span>. En este espacio interactivo, se simula la geometría y la intensidad de las líneas de campo magnético producidas por una corriente constante. Al alterar la intensidad de la corriente (<span class="var">I</span>) o la distancia de evaluación (<span class="var">r</span>), la simulación recalculará la magnitud del campo empleando la Ley de Biot-Savart o la Ley de Ampère, ilustrando vectorialmente la dirección del campo mediante la Regla de la Mano Derecha.</p>
         
         <div class="sim-magnetic-container">
-
+ 
           <div class="mag-mode-group" id="magModeGroup">
             <div class="mag-mode-btn active" data-mode="cross">Sección transversal</div>
             <div class="mag-mode-btn" data-mode="graph">Gráfica B vs r</div>
@@ -232,10 +241,10 @@
           <div class="mag-eq-box" id="magEqBox"></div>
          
         </div>
-
+ 
         </div>
 </section>
-
+ 
 <section id="induccion" class="section">
     <div class="card">
         <h1>Inducción electromagnética</h1>
@@ -287,19 +296,19 @@
         </div>
         </div>
 </section>
-
+ 
 <section id="ondas" class="section">
     <div class="card">
         <h1>Ondas electromagnéticas</h1>
         <p>Las ondas electromagnéticas son perturbaciones auto-propagadas en el espacio que se originan a partir de cargas eléctricas aceleradas. Esta simulación tridimensional permite visualizar la naturaleza transversal de la luz, donde el campo eléctrico (<span class="var" style="color:#ff4d4d; font-weight:600;">E</span>) y el campo magnético (<span class="var" style="color:#4da3ff; font-weight:600;">B</span>) oscilan en fases perpendiculares entre sí y, a su vez, ortogonales a la dirección en la que viaja la onda. Modificando variables como la frecuencia (<span class="var">&nu;</span>) o la amplitud, podrás comprobar la relación matemática directa entre la longitud de onda (<span class="var">&lambda;</span>) y la velocidad de la luz (<span class="var">c</span>).</p>
-
+ 
         <div class="sim-waves-container">
-
+ 
           <div class="wav-toolbar">
             <button class="wav-btn" id="wavBtnPause" type="button">⏸ Pausar Animación</button>
             <button class="wav-btn" id="wavBtnReset" type="button">⟲ Reiniciar Fase</button>
           </div>
-
+ 
           <div class="wav-controls-grid">
             <div class="wav-ctrl-card">
               <p class="wav-ctrl-label">Frecuencia &nu;</p>
@@ -316,17 +325,17 @@
               </div>
             </div>
           </div>
-
+ 
           <div class="wav-canvas-wrap">
             <canvas id="cvWaves" height="360"></canvas>
           </div>
-
+ 
           <div class="wav-legend">
             <div class="wav-legend-item"><div class="wav-legend-dot" style="background:#ff4d4d"></div>Campo eléctrico E (plano vertical)</div>
             <div class="wav-legend-item"><div class="wav-legend-dot" style="background:#4da3ff"></div>Campo magnético B (plano diagonal)</div>
             <div class="wav-legend-item"><div class="wav-legend-dot" style="background:#ffd23f"></div>Vector de Poynting S</div>
           </div>
-
+ 
           <div class="wav-metrics-row">
             <div class="wav-metric">
               <p class="wav-metric-label">Longitud de onda &lambda;</p>
@@ -341,11 +350,14 @@
               <p class="wav-metric-value"><span id="metWavOmega">—</span> <span class="wav-metric-unit">rad/s</span></p>
             </div>
           </div>
-
+ 
           <div class="wav-eq-box" id="wavEqBox"></div>
-
+ 
         </div>
     </div>
 </section>
-
+ 
     </main>
+<script src="script.js"></script>
+</body>
+</html>
